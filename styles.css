@@ -7,28 +7,27 @@ body {
     text-align: center;
 }
 
-/* Limit max width for phones */
-header, section, footer {
-    max-width: 95%;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+header {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
+    margin: 20px;
 }
 
 h1, h2 {
     color: #d63384;
 }
 
-/* Fix spacing on small screens */
 section {
-    margin: 20px auto;
+    margin: 40px 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
 }
 
-/* Responsive photo grid */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
 }
 
@@ -38,31 +37,12 @@ img {
     border-radius: 10px;
 }
 
-/* Timer styling */
 #timer {
-    font-size: 1.8em;
+    font-size: 2em;
     color: #d63384;
 }
 
-/* ----- iPhone Fix for YouTube Video ----- */
-iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;   /* ensures no overflow on iPhones */
-    border-radius: 10px;
-}
-
-/* Extra responsive rules for very small screens (iPhone SE) */
-@media (max-width: 375px) {
-    h1 {
-        font-size: 1.4rem;
-    }
-
-    #timer {
-        font-size: 1.5rem;
-    }
-
-    .photo-grid {
-        grid-template-columns: 1fr;
-    }
+footer {
+    padding: 20px;
+    background: #f8f9fa;
 }
