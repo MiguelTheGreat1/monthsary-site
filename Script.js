@@ -1,5 +1,5 @@
 // Set the date for your 1-year anniversary (replace with your actual date)
-const anniversaryDate = new Date('2025-12-5T00:00:00'); // Example: Dec 31, 2024. Change this!
+const anniversaryDate = new Date('2026-4-5T00:00:00'); // Example: Dec 31, 2024. Change this!
 function updateCountdown() {
     const now = new Date();
     const timeLeft = anniversaryDate - now;
