@@ -1,48 +1,19 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ffe6f2, #ffb3d9);
-    color: #333;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+// Set the date for your 1-year anniversary (replace with your actual date)
+const anniversaryDate = new Date('2024-12-5T00:00:00'); // Example: Dec 31, 2024. Change this!
+function updateCountdown() {
+    const now = new Date();
+    const timeLeft = anniversaryDate - now;
+    
+    if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        document.getElementById('timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    } else {
+        document.getElementById('timer').innerHTML = "It's here! Happy Anniversary!";
+    }
 }
-
-header {
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 20px;
-}
-
-h1, h2 {
-    color: #d63384;
-}
-
-section {
-    margin: 40px 20px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-#timer {
-    font-size: 2em;
-    color: #d63384;
-}
-
-footer {
-    padding: 20px;
-    background: #f8f9fa;
-}
+setInterval(updateCountdown, 1000);
+updateCountdown();
